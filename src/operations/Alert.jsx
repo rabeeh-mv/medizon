@@ -13,7 +13,7 @@ function Alert({ alert, onConfirm, onCancel, handleDeleteStudent }) {
             const timer = setTimeout(() => {
                 setShow(false);
                 document.body.style.overflow = 'unset';
-            }, 3000);
+            }, 8000);
             return () => {
                 clearTimeout(timer);
                 document.body.style.overflow = 'unset';
@@ -39,10 +39,10 @@ function Alert({ alert, onConfirm, onCancel, handleDeleteStudent }) {
                                     <p className="text-sm text-gray-600 mt-1">{alert}</p>
                                 </div>
                                 <button 
-                                    onClick={() => setShow(false)}
+                                    onClick={onCancel}
                                     className="text-gray-400 hover:text-gray-600 transition-colors"
                                 >
-                                    <X className="w-5 h-5" />
+                                    {/* <X className="w-5 h-5" /> */}
                                 </button>
                             </div>
                             {onConfirm && onCancel && (

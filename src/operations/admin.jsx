@@ -6,13 +6,15 @@ import {
   CreditCard,
   Building2,
   ChevronRight,
-  Menu
+  Menu,
+  LucideSquareGanttChart
 } from 'lucide-react';
 import Dashboard from './Dashboard';
 import Addstd from '../Addstd/Addstd';
 import AddUpdates from '../Updates/AddUpdates';
 import Hospitals from '../Hospital/hospitals';
 import Payment from '../payment/payment'
+import StudentMedical from '../Status/StudentMedical'
 const colors = {
   primary: '#0F766E',    // Deeper teal for better contrast
   secondary: '#14B8A6',  // Brighter teal for accents
@@ -31,6 +33,7 @@ function Admin() {
     { label: 'Dashboard', icon: Home, component: 'dashboard' },
     { label: 'Add Student', icon: UserPlus, component: 'student' },
     { label: 'Add Updates', icon: PlusSquare, component: 'Updates' },
+    { label: 'Student status', icon: LucideSquareGanttChart, component: 'status' },
     { label: 'Payment', icon: CreditCard, component: 'payment' },
     { label: 'Add Hospital', icon: Building2, component: 'hospital' },
   ];
@@ -114,6 +117,7 @@ function Admin() {
               {activeComponent === 'hospital' && <Hospitals />}
               {activeComponent === 'payment' && <Payment />}
               {activeComponent === 'Updates' && <AddUpdates />}
+              {activeComponent === 'status' && <StudentMedical />}
             </div>
           </div>
         </div>
