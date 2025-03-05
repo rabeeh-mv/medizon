@@ -39,7 +39,7 @@ const Home = () => {
         <button  className="flex items-center bg-white/10 text-white px-4 md:px-6 py-2 md:py-3 rounded-xl hover:bg-white/20 transition duration-300 backdrop-blur-sm border border-white/20 text-sm md:text-base">
           <FaUser className="mr-2" />
           {/* <Links> */}
-          <a href="/admin">Login</a>
+          <a href="/login">Login</a>
           {/* </Links> */}
         </button>
       </div>
@@ -66,14 +66,14 @@ const Home = () => {
               onBlur={() => setIsSearchFocused(false)}
               className="w-full md:w-96 px-4 md:px-6 py-3 md:py-4 rounded-l-2xl border-0 focus:outline-none focus:ring-2 focus:ring-green-400 bg-white/10 text-white placeholder-gray-400 backdrop-blur-sm text-sm md:text-base"
             />
-            <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-6 md:px-8 py-3 md:py-4 rounded-r-2xl hover:opacity-90 transition duration-300 flex items-center group">
-              <FaSearch className="text-base md:text-lg group-hover:scale-110 transition-transform duration-300" />
+            <button type="button" className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-6 md:px-8 py-3 md:py-4 cursor-pointer rounded-r-2xl hover:opacity-90 transition duration-300 flex items-center group">
+              <FaSearch className="text-base md:text-lg group-hover:scale-110 transition-transform duration-300 cursor-pointer" />
             </button>
           </div>
         </div>
 
         {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-12 md:mt-16 px-4">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-12 md:mt-16 px-4">
           {['AI Diagnostics', 'Real-time Monitoring', 'Secure Records'].map((feature, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-4 md:p-6 border border-white/10 hover:border-green-400/30 transition-all duration-300 hover:transform hover:-translate-y-1">
               <div className="text-green-400 mb-3 md:mb-4">
@@ -83,7 +83,7 @@ const Home = () => {
               <p className="text-gray-400 text-xs md:text-sm">Experience the next generation of healthcare technology.</p>
             </div>
           ))}
-        </div>
+        </div> */}
       </section>
 
       {/* Footer */}
